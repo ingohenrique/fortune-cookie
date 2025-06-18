@@ -1,46 +1,180 @@
 .container {
-    text-align: center;
-    padding: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff3e0;
-    min-height: 100vh;
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: bounce 2s infinite;
+}
+
+.container h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input.nome-input {
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d3748;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input.nome-input:focus {
+  outline: none;
+  border-color: #4fd1c7;
+  box-shadow: 0 0 0 3px rgba(79, 209, 199, 0.1);
+  transform: translateY(-2px);
+}
+
+input.nome-input::placeholder {
+  color: #a0aec0;
+}
+
+button {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 209, 199, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:disabled {
+  background: linear-gradient(135deg, #cbd5e0 0%, #a0aec0 100%);
+  cursor: not-allowed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: none;
+}
+
+button:hover:enabled {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(79, 209, 199, 0.6);
+}
+
+button:active:enabled {
+  transform: translateY(-1px);
+}
+
+.frase {
+  margin-top: 40px;
+  padding: 24px;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+  
+  .cookie-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
   }
   
   input.nome-input {
-    padding: 10px;
+    max-width: 280px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    width: 60%;
-    max-width: 300px;
+    padding: 14px 18px;
   }
   
   button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-  }
-  
-  button:disabled {
-    background-color: #ffc107;
-    cursor: not-allowed;
-  }
-  
-  button:hover:enabled {
-    background-color: #fb8c00;
+    padding: 14px 28px;
+    font-size: 1.1rem;
   }
   
   .frase {
+    font-size: 1.3rem;
+    padding: 20px;
     margin-top: 30px;
-    font-size: 1.5rem;
-    font-style: italic;
-    color: #3e2723;
   }
+}
+
+@media (max-width: 480px) {
+  .cookie-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .container h1 {
+    font-size: 1.8rem;
+  }
+  
+  input.nome-input {
+    max-width: 260px;
+  }
+  
+  .frase {
+    font-size: 1.2rem;
+    padding: 16px;
+  }
+}
   

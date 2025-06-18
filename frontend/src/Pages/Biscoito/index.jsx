@@ -31,15 +31,27 @@ export function Biscoito() {
     socket.emit('quebrarBiscoito', nome);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      quebrarBiscoito();
+    }
+  };
+
   return (
     <div className="container">
-      <h1>🍪 Quebrar Biscoito da Sorte</h1>
+      <img 
+        src="/fortune-cookie.png" 
+        alt="Biscoito da Sorte" 
+        className="cookie-image"
+      />
+      <h1>Fortune Cookie</h1>
 
       <input
         type="text"
         placeholder="Digite seu nome"
         value={nome}
         onChange={(e) => setNome(e.target.value)}
+        onKeyPress={handleKeyPress}
         className="nome-input"
       />
 

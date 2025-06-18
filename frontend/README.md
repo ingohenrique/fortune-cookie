@@ -1,12 +1,37 @@
-# React + Vite
+# 🍪 Frontend - Fortune Cookie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web do aplicativo de Biscoito da Sorte colaborativo.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React.js** - Interface de usuário
+- **Vite** - Build tool e servidor de desenvolvimento
+- **Socket.IO Client** - Comunicação WebSocket em tempo real
+- **React Toastify** - Notificações
 
-## Expanding the ESLint configuration
+## 🔧 Como rodar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Instalar dependências
+npm install
+
+# Configurar variáveis de ambiente
+cp env.example .env
+# Edite o .env com a URL do backend
+
+# Rodar em desenvolvimento
+npm run dev
+
+# Rodar testes
+npm test
+```
+
+## 📱 Funcionalidades
+
+- Interface moderna com gradientes e animações
+- Campo de nome com validação
+- Botão para quebrar biscoito (clique ou Enter)
+- Notificações em tempo real de outros usuários
+- Design responsivo para mobile
+
+O frontend se conecta ao backend via WebSocket para receber atualizações em tempo real quando outros usuários quebram biscoitos da sorte.

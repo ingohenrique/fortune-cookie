@@ -1,5 +1,5 @@
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
 
-const socket = io('http://10.3.76.4:3000');
+const socket = io(import.meta.env.VITE_BACKEND_URL || "http://localhost:3000");
 
 export default socket;

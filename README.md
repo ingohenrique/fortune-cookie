@@ -2,6 +2,11 @@
 
 Uma aplicação web interativa onde múltiplos usuários podem quebrar biscoitos da sorte e ver em tempo real quando outros usuários fazem o mesmo.
 
+## 🌐 Links do Projeto
+
+- **Frontend:** [https://fortune-cookie-nine.vercel.app](https://fortune-cookie-nine.vercel.app)
+- **Backend:** [https://fortune-cookie-production-d8e8.up.railway.app](https://fortune-cookie-production-d8e8.up.railway.app)
+
 ## 🚀 Tecnologias Utilizadas
 
 ### Backend
